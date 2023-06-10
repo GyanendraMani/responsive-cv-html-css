@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background: #c4c4c4;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.profile {
+	width: 100%;
+	border-bottom: 1px solid #002333;
+}
+
+.image {
+	width: 100%;
+	padding: 50px;
+	text-align: center;
+}
+
+.profile img {
+	width: 100%;
+	border-radius: 50%;
+	border: 8px solid #002333;
+
+}
+
+/* .name {
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 1.2rem 0;
+}
+
+.career {
+	font-size: 1.2rem;
+	color: #94D9EA;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-bottom: 1rem;
+} */
+
+
+.resume_wrapper {
+	display: flex;
+	width: 800px;
+	margin: 50px auto;
+	background: #fff;
+	padding: 10px;
+}
+
+.resume_wrapper .resume_left {
+	width: 35%;
+	background: #26252d;
+}
+
+.resume_wrapper .resume_left .resume_image {
+	width: 100%;
+}
+
+.resume_wrapper .resume_left .resume_image img {
+	width: 100%;
+	display: block;
+}
+
+.resume_wrapper .resume_title {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 10px;
+	letter-spacing: 4px;
+}
+
+.resume_wrapper .resume_left .resume_info {
+	color: #84838b;
+}
+
+.resume_wrapper .resume_left .resume_bottom {
+	padding: 20px 30px;
+}
+
+.resume_wrapper .resume_item {
+	padding: 20px 0;
+	border-bottom: 1px solid #0175b2;
+}
+
+.resume_wrapper .resume_item:last-child {
+	border-bottom: 0;
+}
+
+.resume_wrapper .resume_left .resume_profile {
+	display: none;
+}
+
+.resume_wrapper .resume_namerole .name {
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 5px;
+	letter-spacing: 4px;
+}
+
+.resume_wrapper .resume_left .resume_namerole .role {
+	color: #84838b;
+}
+
+.resume_wrapper .resume_left .resume_contact .resume_info:last-child {
+	margin-top: 10px;
+}
+
+.resume_wrapper .resume_left .resume_contact .resume_subtitle {
+	color: #fff;
+	margin-bottom: 2px;
+}
+
+.resume_wrapper .resume_left .resume_skills .skills_list {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.resume_wrapper .resume_left .resume_skills .skills_list .skills_bar p {
+	position: relative;
+	width: 125px;
+	height: 20px;
+	background: #fff;
+}
+
+.resume_wrapper .resume_left .resume_skills .skills_list .skills_bar p span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #0175b2;
+	width: 100%;
+	height: 100%;
+}
+
+.resume_wrapper .resume_right {
+	width: 65%;
+	padding: 20px 40px;
+	color: #26252d;
+}
+
+.resume_wrapper .resume_right .resume_namerole .name {
+	color: #26252d;
+	font-size: 32px;
+}
+
+.resume_wrapper .resume_right .resume_namerole .role {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.resume_wrapper .resume_right .resume_item .resume_title {
+	color: #26252d;
+}
+
+.resume_wrapper .resume_right .resume_data {
+	display: flex;
+}
+
+.resume_wrapper .resume_right .resume_data .year {
+	padding-right: 35px;
+	width: 120px;
+	position: relative;
+}
+
+.resume_wrapper .resume_right .resume_data .content {
+	padding-left: 35px;
+	margin-bottom: 20px;
+	width: calc(100% - 115px);
+}
+
+.resume_wrapper .resume_right .resume_data .year:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border: 1px solid #26252d;
+	border-radius: 50%;
+}
+
+.resume_wrapper .resume_right .resume_data .year:after {
+	content: "";
+	position: absolute;
+	top: 17px;
+	right: 4px;
+	width: 3px;
+	height: 100%;
+	background: #0175b2;
+}
+
+.resume_wrapper .resume_right .resume_data:last-child .year:after {
+	display: none;
+}
+
+.resume_wrapper .resume_right .resume_skills {
+	display: none;
+}
+
+.resume_wrapper .resume_right .resmue_interests .resume_info {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.resume_wrapper .resume_right .resmue_interests .interests .int_icon {
+	font-size: 38px;
+	color: #0175b2;
+	margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+	.resume_wrapper .resume_right .resume_profile {
+		display: none;
+	}
+
+	.resume_wrapper .resume_left .resume_skills {
+		display: none;
+	}
+
+	.resume_wrapper .resume_right .resume_skills {
+		display: block;
+	}
+
+	.resume_wrapper .resume_left .resume_profile {
+		display: block;
+	}
+
+	.resume_wrapper {
+		width: 95%;
+		margin: 10px auto;
+		flex-direction: column;
+	}
+
+	.resume_wrapper .resume_left,
+	.resume_wrapper .resume_right {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 424px) {
+	.resume_wrapper .resume_right {
+		padding: 20px 30px;
+	}
+
+	.resume_wrapper .resume_right .resume_data {
+		flex-direction: column;
+	}
+
+	.resume_wrapper .resume_right .resume_data .year {
+		padding: 0;
+		margin-bottom: 5px;
+		width: 100%;
+		color: #0175b2;
+	}
+
+	.resume_wrapper .resume_right .resume_data .year:before,
+	.resume_wrapper .resume_right .resume_data .year:after {
+		display: none;
+	}
+
+	.resume_wrapper .resume_right .resume_data .content {
+		width: 100%;
+		padding: 0;
+	}
+
+	.resume_wrapper .resume_right .resmue_interests .interests .int_icon {
+		font-size: 24px;
+	}
+}
+
+.skills-section ul {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+/* .skills-section ul li{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .4rem 0;
+} */
+
+.progress-bar {
+	width: 100%;
+	height: .7rem;
+	background-color: #2f81ed5b;
+	position: relative;
+	margin-top: .2rem;
+	margin-bottom: .6rem;
+	border-radius: 12px;
+}
+
+.progress {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	background-color: #2D9CDB;
+	border-radius: 12px;
+}
+
+.js-progress {
+	width: 70%;
+}
+
+.ps-progress {
+	width: 90%;
+}
+
+.j-progress {
+	width: 85%;
+}
+
+.c-progress {
+	width: 40%;
+}
+
+.n-progress {
+	width: 63%;
+}
+
+.w-progress {
+	width: 78%;
+}
+
+.field-items {
+	padding-left: 30px;
+}
+
+.field-item {
+	display: list-item;
+	list-style-type: disc;
+}
+
+.btn {
+	border: 1px solid black;
+	background-color: rgba(255, 255, 255, 0);
+	color: black;
+	padding: 10px;
+	margin-top: 12px;
+	font-size: .8rem;
+	cursor: pointer;
+	width: 100%;
+}
+
+.info {
+	border-color: #2196F3;
+	color: dodgerblue;
+}
+
+.info:hover {
+	background: #2196F3;
+	color: white;
+}
+
+.fa {
+	padding: 10px;
+	font-size: 1rem;
+	
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	border-radius: 50%;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+
+.fa-google {
+	background: #dd4b39;
+	color: white;
+}
+
+.fa-linkedin {
+	background: #007bb5;
+	color: white;
+}
+
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
+
+
+.fa-github {
+	background: white;
+	color: rgb(0, 0, 0);
+}
