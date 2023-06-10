@@ -7,11 +7,9 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master  
+      - uses: actions/checkout@main 
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: mkdir -p ./cv
-      - run: cp -r . ./cv
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -20,5 +18,5 @@ jobs:
           aws-region: us-east-1
       - name: Copy files to the production website with the AWS CLI
         run: |
-         aws s3 cp -r . s3://test-github1/
+         aws s3 cp -r ./cv/. s3://test-github1/
       - run: echo "This job's status is ${{ job.status }}."  
