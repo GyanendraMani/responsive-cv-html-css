@@ -15,8 +15,8 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-          aws-region: us-east-1
+          aws-region: ap-south-1
       - name: Copy files to the production website with the AWS CLI
         run: |
-         aws s3 cp -r ./cv/. s3://test-github1/
+         aws s3 cp ./cv/. s3://test-github1/ --recursive
       - run: echo "This job's status is ${{ job.status }}."  
